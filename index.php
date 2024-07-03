@@ -21,10 +21,17 @@
                 <label for="addCat" class="form-label">Добавление котямбы</label>
                 <button class="btn btn-success mt-2" id="addCat" data-bs-toggle="modal" data-bs-target="#create"><i class="fa fa-plus"></i></button>
             </div>
-            <div class="col-10">
+            <div class="col-8">
                 <form action="" method="post">
-                    <label for="customRange2" class="form-label">Фильтр по годам</label>
-                    <input type="range" class="form-range my-2" min="0" max="5" id="customRange2">
+                    <label for="customRange2" class="form-label">Фильтр по возрасту</label>
+
+                    <div class="input-group mb-3 id" id="customRange2">
+                        <input type="number" class="form-control" placeholder="min_age" aria-label="min_age">
+                        <span class="input-group-text"> - </span>
+                        <input type="number" class="form-control" placeholder="max_age" aria-label="max_age">
+                        <button type="submit" class="btn btn-success form-control" name="filter">Фильтровать</button>
+                    </div>
+                    <!-- <input type="range" class="form-range my-2" min="0" max="5" id="customRange2"> -->
                     <!-- <button type="submit" class="btn btn-success float-end pull-right" name="filter">Фильтровать</button> -->
                 </form>
             </div>
