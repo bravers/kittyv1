@@ -70,6 +70,19 @@ if($link) {
     $query = $link->query("SELECT * FROM list WHERE flag = 1");
 }
 
+//Filter
+if(isset($_POST["filter"])) {
+    //var_dump($_POST);
+    $min_age = $_POST["min_age"];
+    $max_age = $_POST["max_age"];
+    if($link) {
+        $query = $link->query("SELECT * FROM list WHERE flag = 1 AND BETWEEN $min_age AND $max_age");
+        if($query) {
+            header("Location: ". $_SERVER['HTTP_REFERER']);
+        }
+    }
+}
+
 //Edit
 
 if(isset($_POST["edit"])) {

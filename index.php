@@ -16,9 +16,21 @@
 </head>
 <body>
     <div class="container">
+        <div class="row mt-4">
+            <div class="col-2">
+                <label for="addCat" class="form-label">Добавление котямбы</label>
+                <button class="btn btn-success mt-2" id="addCat" data-bs-toggle="modal" data-bs-target="#create"><i class="fa fa-plus"></i></button>
+            </div>
+            <div class="col-10">
+                <form action="" method="post">
+                    <label for="customRange2" class="form-label">Фильтр по годам</label>
+                    <input type="range" class="form-range my-2" min="0" max="5" id="customRange2">
+                    <!-- <button type="submit" class="btn btn-success float-end pull-right" name="filter">Фильтровать</button> -->
+                </form>
+            </div>
+        </div>
         <div class="row">
             <div class="col-12">
-                <button class="btn btn-success mt-2" data-bs-toggle="modal" data-bs-target="#create"><i class="fa fa-plus"></i></button>
                 <table class="table table-striped table-hover mt-4">
                     <thead class="table-dark">
                         <th>Id</th>
